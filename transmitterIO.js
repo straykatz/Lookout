@@ -151,15 +151,15 @@ module.exports = async (options, storage, client, fakeMeter) => {
         + '\n====================================',
       );
 
-      // cp.exec('bash -c "wall Rebooting Due to Transmitter Read Errors; sleep 5; shutdown -r now"', (err, stdout, stderr) => {
-      //   if (err) {
-      //     error(`Unable to reboot rig: - ${err}`);
-      //     return;
-      //   }
+      cp.exec('bash -c "wall Rebooting Due to Transmitter Read Errors; sleep 5; shutdown -r now"', (err, stdout, stderr) => {
+        if (err) {
+          error(`Unable to reboot rig: - ${err}`);
+          return;
+        }
 
-      //   debug(`stdout: ${stdout}`);
-      //   debug(`stderr: ${stderr}`);
-      // });
+        debug(`stdout: ${stdout}`);
+        debug(`stderr: ${stderr}`);
+      });
     } else {
       error(
         '\n====================================\n'
