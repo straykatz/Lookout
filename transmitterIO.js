@@ -1063,9 +1063,9 @@ module.exports = async (options, storage, client, fakeMeter) => {
       let pendingCalTime;
 
       if (m.msg === 'getMessages') {
-        if (!txStatus || (moment().diff(txStatus.timestamp, 'minutes') > 25)) {
-          pending.push({ type: 'BatteryStatus' });
-        }
+        // if (!txStatus || (moment().diff(txStatus.timestamp, 'minutes') > 25)) {
+        //   pending.push({ type: 'BatteryStatus' });
+        // }
 
         pendingCalTime = await calibrateFromNS();
 
