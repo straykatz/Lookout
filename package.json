@@ -35,7 +35,7 @@
         "request-promise-native": "^1.0.5",
         "socket.io": "^2.2.0",
         "socket.io-client": "^2.1.1",
-        "xdrip-js": "xdrip-js/xdrip-js#patch-for-g6-plus",
+        "xdrip-js": "jpcunningh/xdrip-js#decode-g6-plus-sensor-rx",
         "yargs": "^10.0.3"
     },
     "devDependencies": {
